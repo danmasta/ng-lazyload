@@ -1,0 +1,8 @@
+/*lazyload test css*/
+[data-message]{ position:fixed; top:0; left:0; width:100%; z-index:9}
+[data-message] .message{ max-width:100%; margin:0 auto; text-align:center;}
+[data-message] .message span{ margin-left:0; white-space:nowrap;}
+[data-message] .message span:first-child{ margin-left:0;}
+[lazyload-test]{ list-style:none; padding:0; margin:0;}
+[lazyload-test] li{ margin:10px 0; padding:20px; border:1px solid #ddd; padding-bottom:33.33333333%; background-position:center center; background-repeat:no-repeat; text-align:center;}
+[lazyload-test] li.loading{ background-image:url('loading.gif') !important; background-size:auto auto !important;}
