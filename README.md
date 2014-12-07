@@ -97,9 +97,9 @@ The adaptive image loading breakpoints are as follows
 
 affix | breakpoint
 ----- | ----------
-<pre>-xs</pre> | < 768
-<pre>-sm</pre> | < 992
-<pre>-md</pre> | < 1200
+<pre>-xs</pre> | $window.innerWidth < 768
+<pre>-sm</pre> | $window.innerWidth < 992
+<pre>-md</pre> | $window.innerWidth < 1200
 
 When adaptive is set to true, the url is affixed with one of the options above. If the affixed url is not found, it will fall back to the original non-affixed url and try again.
 
