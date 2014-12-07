@@ -25,15 +25,15 @@ app.config(['lazyloadProvider', function(lazyloadProvider){
 ####Methods
 name | description
 ---- | ----
-```get(key)``` | returns current default options, optional key returns that value only
-```set(opts)``` | sets default options, accepts an object with key value pairs of options
+<pre>get(key)</pre> | returns current default options, optional key returns that value only
+<pre>set(opts)</pre> | sets default options, accepts an object with key value pairs of options
 
 ####Default Options
 name | value | description
 ---- | ----- | -----------
-```adaptive``` | false | boolean - attempt to load adaptive image url
-```size``` | false | boolean or string - css property string to use as `background-size` on non `<img>` elements. value of true will determine best setting automatically. false disables output.
-```classes``` | true | boolean - enable/ disable loading and error classes
+<pre>adaptive</pre> | false | boolean - attempt to load adaptive image url
+<pre>size</pre> | false | boolean or string - css property string to use as `background-size` on non `<img>` elements. value of true will determine best setting automatically. false disables output.
+<pre>classes</pre> | true | boolean - enable/ disable loading and error classes
 
 ###Service: lazyload
 Lazyload service is itself a function that accepts four arguments and manages the lazyloading process. Always returns a promise that resolves with an `<img>` object if succesful or rejects with url if there is an error.
@@ -54,10 +54,10 @@ app.directive('someThing', ['lazyload', function(lazyload){
 ####Arguments
 name | description
 ---- | ----
-```url``` | required - string - url path of image to load
-```$elem``` | optional - array - angular or jquery element to bind image to
-```$attr``` | optional - object - angular post-link normalized attributes object, necessary if setting options via element attributes
-```opts``` | optional - object - lazyload configuration options
+<pre>url</pre> | required - string - url path of image to load
+<pre>$elem</pre> | optional - array - angular or jquery element to bind image to
+<pre>$attr</pre> | optional - object - angular post-link normalized attributes object, necessary if setting options via element attributes
+<pre>opts</pre> | optional - object - lazyload configuration options
 
 ###Service: preload
 Preload service is a helper/ utility function for loading an array of image urls at once. It does not set any values on elements or modify the dom at all, it only loads urls and returns a promise using `$q.all()` that resolves when all urls have loaded. You can use the `.notify()` method to receive updates on loading status.
@@ -94,11 +94,13 @@ Any of the default options can be overriden on an individual basis with attribut
 
 ##Notes
 The adaptive image loading breakpoints are as follows
+
 affix | breakpoint
----- | ----
-```-xs``` | < 768
-```-sm``` | < 992
-```-md``` | < 1200
+----- | ----------
+<pre>-xs</pre> | < 768
+<pre>-sm</pre> | < 992
+<pre>-md</pre> | < 1200
+
 When adaptive is set to true, the url is affixed with one of the options above. If the affixed url is not found, it will fall back to the original non-affixed url and try again.
 
 ##Roadmap
