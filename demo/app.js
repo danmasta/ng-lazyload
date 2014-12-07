@@ -19,7 +19,8 @@ app.directive('lazyloadTest', [function(){
       };
     },
     template:function(){
-      return '<li data-test-item ng-repeat="item in testitems" class="col-xs-4" ng-lazyload="">{{item.title}}</li>'
+      return '<li data-test-item ng-repeat="item in testitems" class="col-xs-4" lazyload="">{{item.title}}</li>'
+      //return '<img data-test-item ng-repeat="item in testitems" class="col-xs-4" lazyload="" />'
     },
     link:function($scope, $element, $attributes, controller){
       $scope.testitems = [];
@@ -38,7 +39,7 @@ app.directive('testItem', function(){
     },
     link: function($scope, $element, $attributes, controller){
       function setUrl(){
-        $attributes.$set('ngLazyload', $scope.getUrl());
+        $attributes.$set('lazyload', $scope.getUrl());
       };
       $scope.$on('load.url', function(){
         setUrl();
