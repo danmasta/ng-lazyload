@@ -77,7 +77,7 @@ app.run(['preload', function(preload){
 ####Arguments
 name | description
 ---- | ----
-```urls``` | required - array - array of url paths to load
+<pre>urls</pre> | required - array - array of url paths to load
 
 
 ###Directive: lazyload
