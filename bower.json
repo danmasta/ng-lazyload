@@ -1,0 +1,33 @@
+{
+  "name": "ng-lazyload",
+  "version": "2.0.0",
+  "homepage":"https://github.com/danmasta/ngLazyload",
+  "authors": [
+    { "name" : "Daniel Smith",
+      "homepage" : "http://danmasta.com/"
+    }
+  ],
+  "description": "Lazyload and preload images in Angular applications",
+  "main": "./nglazyload.js",
+  "keywords": [
+    "lazyload",
+    "ui",
+    "preload",
+    "angular",
+    "javascript",
+    "images"
+  ],
+  "dependencies": {
+    "angular": ">= 1.0.8"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "component.json",
+    "package.json",
+    "tests",
+    "gulpfile.js",
+    "demo"
+  ]
+}
